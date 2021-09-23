@@ -1,0 +1,29 @@
+<div class="col-md-offset-2 " *ngIf="transactions.length">
+    <div class="table table-striped table-hover">
+    <table class="table table-dark table-hover">
+        <tr>
+            <th ><b>TransactionID</b></th>
+            <th><b>TransferDate</b></th>
+            <th><b>ReceiverAccountNo</b></th>
+            <th><b>ReceiverName</b></th>
+            <th><b>Amount</b></th>
+            
+        </tr> 
+        <tr  *ngFor="let t of transactions">
+
+            <td style="text-align: center;">{{t.transactionid}}</td>
+            <td>{{t.transferdate}}</td>
+            <td >{{t.receiveraccountholdernumber}}</td>
+            <td >{{t.receiveraccountholdername}}</td>
+            <td >{{t.inramount}}</td>
+
+
+        </tr>
+        </table>
+        </div>
+        </div>
+
+
+<div *ngIf="!transactions.length">
+    <h2>No transactions</h2>
+</div>

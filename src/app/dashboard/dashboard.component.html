@@ -1,0 +1,43 @@
+
+<div class="table table-striped table-hover">
+<table class="table table-dark table-hover">
+    <tr>
+        <th><b>Customer ID</b></th>
+        <td>{{customer.customerid}}</td>
+      </tr>
+      <tr>
+        <th><b>Over-draft</b></th>
+        <td>{{customer.overdraftflag}}</td>
+      </tr>
+      <tr>
+        <th><b>City</b></th>
+        <td>{{customer.customercity}}</td>
+      </tr>
+        
+      <tr>
+        <th><b>Name</b></th>
+        <td>{{customer.accountholdername}}</td>
+      </tr>
+      <tr>
+        <th><b>Balance</b></th>
+        <td>{{customer.clearbalance|currency:"INR"}}</td>
+      </tr>
+      <tr>
+        <th><b>Type</b></th>
+        <td>{{customer.customertype}}</td>
+      </tr>
+      <tr>
+        <th><b>BIC</b></th>
+        <td>{{bank.bic}}</td>
+      </tr>
+
+    <tr>
+      <th><b>Bank</b></th>
+      <td>{{bank.bankname}}</td>
+    </tr>
+
+  </table>
+</div>
+
+
+  

@@ -1,0 +1,46 @@
+<form [formGroup]="loginForm" (ngSubmit)="handleLogin()" novalidate>
+    <div *ngIf="flag" class="alert alert-danger mt-3" role="alert">
+        Invalid Credentials
+     </div>
+    <div class="col-md-4 offset-md-3">
+        
+        <div class="form-group">
+            <label for="username" class="form-label mt-4">customerid</label>
+            <input type="text"
+             class="form-control" 
+             id="username" 
+             name="username" 
+             placeholder="Enter customerid" 
+             formControlName="username"
+             autocomplete="off" 
+             />
+             <div *ngIf="!username?.valid && username?.dirty " class="text-danger mt-2">
+                <div *ngIf="username.errors?.required">Username is required</div>
+             </div>
+        </div>
+    </div>
+    <div class="col-md-4 offset-md-3">
+        <div class="form-group">
+            <label for="password" class="form-label mt-4">Password</label>
+            <input type="password"
+             class="form-control" 
+             id="password" 
+             name="password" 
+             placeholder="Enter Password" 
+             formControlName="password"
+             autocomplete="off" 
+             />
+             <div *ngIf="!password?.valid && password?.dirty " class="text-danger mt-2">
+             <div *ngIf="password.errors?.required">Password is required</div>
+        
+             </div>
+             
+        </div>
+    </div>
+
+    <div class="col-md-4 offset-md-3 mt-3">
+        <button class="btn btn-primary" type="submit"
+      
+        >Login</button>
+    </div>
+</form>
